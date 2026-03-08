@@ -55,6 +55,10 @@ export const TRANSLATIONS = {
     'home.hero.cta': 'Saber Mais',
     'home.hero.cta.services': 'Nossos Serviços',
     'home.hero.cta.contact': 'Contactar',
+    'home.hero.badge': 'Especialistas em Gestão da Qualidade',
+    'home.hero.highlight': 'Seu Sucesso',
+    'home.hero.stat1': 'Clientes',
+    'home.hero.stat2': 'Anos de Experiência',
     'hero.cta.certification': 'Certificação',
     'hero.cta.contact': 'Contactar',
 
@@ -1072,6 +1076,10 @@ export const TRANSLATIONS = {
     'home.hero.cta': 'Learn More',
     'home.hero.cta.services': 'Our Services',
     'home.hero.cta.contact': 'Contact',
+    'home.hero.badge': 'Quality Management Experts',
+    'home.hero.highlight': 'Your Success',
+    'home.hero.stat1': 'Clients',
+    'home.hero.stat2': 'Years of Experience',
     'hero.cta.certification': 'Certification',
     'hero.cta.contact': 'Contact',
 

@@ -15,9 +15,9 @@ export function Footer() {
   const [isCookieModalOpen, setIsCookieModalOpen] = useState(false);
   
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+    <footer className="bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 text-white border-t border-slate-800/50">
       {/* Main Footer Content */}
-      <div className="mx-auto px-6 py-24">
+      <div className="mx-auto px-6 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           
           {/* Company Info */}

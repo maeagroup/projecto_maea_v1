@@ -43,6 +43,10 @@ const ENGLISH_TRANSLATIONS = {
   'home.hero.title': 'MAEA',
   'home.hero.description': 'Quality management and ISO certification experts for the oil and gas industry. We offer integrated business consulting, ISO certification and corporate training solutions to drive your company\'s success.',
   'home.hero.cta': 'Learn More',
+  'home.hero.badge': 'Quality Management Experts',
+  'home.hero.highlight': 'Your Success',
+  'home.hero.stat1': 'Clients',
+  'home.hero.stat2': 'Years of Experience',
 
   // Services
   'services.section.title': 'Our Services',

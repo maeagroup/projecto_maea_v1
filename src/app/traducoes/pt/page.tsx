@@ -43,6 +43,10 @@ const PORTUGUESE_TRANSLATIONS = {
   'home.hero.title': 'MAEA',
   'home.hero.description': 'Especialistas em gestão da qualidade e certificação ISO para o setor petrolífero. Oferecemos soluções integradas de consultoria empresarial, certificação ISO e treinamento corporativo para impulsionar o sucesso da sua empresa.',
   'home.hero.cta': 'Saber Mais',
+  'home.hero.badge': 'Especialistas em Gestão da Qualidade',
+  'home.hero.highlight': 'Seu Sucesso',
+  'home.hero.stat1': 'Clientes',
+  'home.hero.stat2': 'Anos de Experiência',
 
   // Serviços
   'services.section.title': 'Nossos Serviços',

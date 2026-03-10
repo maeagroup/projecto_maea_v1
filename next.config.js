@@ -46,6 +46,17 @@ const nextConfig = {
   // Configurações de otimização
   swcMinify: false,
   
+  // Configurações do Webpack
+  webpack: (config, { dev, isServer }) => {
+    if (dev) {
+      // Desabilitar cache durante desenvolvimento
+      config.cache = {
+        type: 'memory'
+      };
+    }
+    return config;
+  },
+  
   // Configurações de produção
   poweredByHeader: false,
   

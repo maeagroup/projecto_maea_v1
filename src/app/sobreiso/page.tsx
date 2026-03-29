@@ -445,36 +445,39 @@ export default function SobreIsoPage() {
 
 
 
-             {/* Floating Certification Button */}
+             {/* Floating CTA */}
        <div className="fixed left-6 bottom-6 z-50 group">
          <div className="relative">
-                     {/* Pulse Animation Background */}
-          <div className="absolute inset-0 bg-gray-500 rounded-2xl animate-ping opacity-20"></div>
-           
-           {/* Main Button */}
+          <div className="pointer-events-none absolute -inset-1 rounded-2xl bg-[#00847e]/30 blur-md opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+
            <a 
-             href="/sobreiso" 
-             className="relative inline-flex items-center gap-3 bg-[#00847e] hover:bg-[#006d68] text-white font-semibold px-6 py-2 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0 min-w-[200px]"
+             href="https://docs.google.com/forms/d/e/1FAIpQLSd0cyeGn-crDB5XFbffxfMTTu6FxeK8FhqNF4kXdc7do0WB6g/viewform"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Solicitar diagnóstico"
+             className="relative inline-flex items-center gap-3 rounded-2xl border border-white/20 bg-gradient-to-r from-[#00766f] to-[#00847e] px-5 py-3 text-white shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#00847e]/30"
            >
-             <DocumentCheckIcon className="h-5 w-5" />
-             <div className="text-left">
-               <div className="font-semibold text-sm">
-                 Certificação
+             <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/15 ring-1 ring-white/25">
+               <DocumentCheckIcon className="h-5 w-5" />
+             </span>
+             <div className="text-left leading-tight">
+               <div className="text-[13px] font-semibold tracking-tight">
+                 Solicite o seu diagnóstico
                </div>
-               <div className="text-xs text-white">
-                 
+               <div className="text-[11px] text-white/80 mt-0.5">
+                 Resposta em até 24 horas
                </div>
              </div>
-             <ArrowRightIcon className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+             <span className="ml-1 flex h-7 w-7 items-center justify-center rounded-full bg-white/15">
+               <ArrowRightIcon className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+             </span>
            </a>
-           
-           {/* Simple Tooltip */}
-           <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 px-3 py-2 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+
+           <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 px-3 py-2 bg-slate-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap shadow-lg">
              <div className="text-center">
-               <div className="font-medium">Certificação ISO</div>
-               <div className="text-xs text-slate-300">Clique para saber mais</div>
+               <div className="font-medium">Diagnóstico Gratuito</div>
+               <div className="text-xs text-slate-300">Abrir formulário</div>
              </div>
-             {/* Tooltip Arrow */}
              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-800"></div>
            </div>
          </div>

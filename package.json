@@ -38,7 +38,7 @@
     "@heroicons/react": "2.0.18",
     "@material-tailwind/react": "2.1.2",
     "framer-motion": "^12.23.12",
-    "next": "^13.5.11",
+    "next": "13.5.10",
     "nodemailer": "^6.10.1",
     "qrcode": "^1.5.4",
     "react": "18",

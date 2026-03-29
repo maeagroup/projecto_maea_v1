@@ -66,8 +66,8 @@ const nextConfig = {
   // Configurações de página
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   
-  // Configurações de asset - configurado para domínio maea.ao
-  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://maea.ao' : '',
+  // Configurações de asset - vazio para funcionar em qualquer domínio
+  assetPrefix: '',
   
   // Configurações de base path
   basePath: '',
@@ -90,10 +90,6 @@ const nextConfig = {
           {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin',
-          },
-          {
-            key: 'Host',
-            value: 'maea.ao',
           },
         ],
       },

@@ -582,7 +582,7 @@ export default function PoliticasPage() {
       {/* Botão Flutuante de Impressão */}
       <div className="fixed left-6 bottom-6 z-50">
         <button
-          className="flex items-center gap-2 bg-gray-800 hover:bg-gray-900 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-full p-4"
+          className="flex items-center gap-2 bg-[#00847e] hover:bg-[#006d68] shadow-lg shadow-[#00847e]/30 hover:shadow-xl text-white transition-all duration-300 rounded-full p-4"
           onClick={handlePrint}
           title={t('policies.print.title')}
         >
@@ -592,136 +592,161 @@ export default function PoliticasPage() {
       </div>
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-700 via-slate-800 to-slate-900 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-6">
-              {t('policies.hero.title')}
-            </h1>
-            <p className="text-white mb-8 opacity-90 max-w-4xl mx-auto text-xl">
-              {t('policies.hero.description')}
-            </p>
-            <div className="flex justify-center gap-4">
-              <a href="/empresa" className="bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                {t('policies.hero.cta.company')}
-              </a>
-              <a href="/contactos" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-colors">
-                {t('policies.hero.cta.contact')}
-              </a>
-            </div>
+      <section className="relative bg-gradient-to-br from-slate-800 via-slate-900 to-[#004d4a] py-24 overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]" style={{backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '48px 48px'}} />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#00847e]/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#00847e]/10 rounded-full blur-3xl" />
+        <div className="relative max-w-4xl mx-auto px-6 text-center">
+          <span className="inline-flex items-center gap-2 bg-[#00847e]/20 text-teal-300 text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-8 border border-[#00847e]/30">
+            <span className="flex h-2 w-2 rounded-full bg-[#00847e] animate-pulse"></span>
+            {t('policies.hero.badge')}
+          </span>
+          <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            {t('policies.hero.title')}
+          </h1>
+          <p className="text-lg text-teal-50/80 max-w-3xl mx-auto mb-10 leading-relaxed">
+            {t('policies.hero.description')}
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <a
+              href="/empresa"
+              className="inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-[#00847e] to-teal-600 px-8 py-4 text-white font-semibold shadow-lg shadow-[#00847e]/30 transition-all duration-300 hover:shadow-xl hover:scale-105 hover:-translate-y-1"
+            >
+              {t('policies.hero.cta.company')}
+            </a>
+            <a
+              href="/contactos"
+              className="inline-flex items-center gap-3 rounded-xl border-2 border-white/30 bg-white/5 px-8 py-4 text-white font-semibold backdrop-blur-sm transition-all duration-300 hover:border-[#00847e] hover:bg-[#00847e]/10 hover:scale-105 hover:-translate-y-1"
+            >
+              {t('policies.hero.cta.contact')}
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Introdução */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#00847e] mb-6">
-                {t('policies.intro.title')}
-              </h2>
-              <p className="text-gray-600 mb-6 text-lg">
-                {t('policies.intro.description1')}
-              </p>
-              <p className="text-gray-600 mb-8 text-lg">
+      {/* Introdução com Valores */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="inline-flex items-center gap-2 bg-[#00847e]/10 text-[#00847e] text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
+              <ShieldCheckIcon className="w-4 h-4" />
+              {t('policies.intro.badge') || 'A Nossa Visão'}
+            </span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-5 leading-tight">
+              {t('policies.intro.title')}
+            </h2>
+            <p className="text-gray-500 text-base max-w-3xl mx-auto leading-relaxed">
+              {t('policies.intro.description1')}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div className="flex flex-col">
+              <p className="text-slate-600 text-base leading-relaxed mb-6">
                 {t('policies.intro.description2')}
               </p>
-              
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <CheckCircleIcon className="h-12 w-12 text-green-600 mx-auto mb-3" />
-                  <h6 className="text-[#00847e] mb-2 font-semibold">
-                    {t('policies.intro.transparency')}
-                  </h6>
-                  <p className="text-gray-600 text-sm">
-                    {t('policies.intro.transparency.desc')}
-                  </p>
-                </div>
-                <div className="text-center">
-                  <ShieldCheckIcon className="h-12 w-12 text-[#00847e] mx-auto mb-3" />
-                  <h6 className="text-[#00847e] mb-2 font-semibold">
-                    {t('policies.intro.ethics')}
-                  </h6>
-                  <p className="text-gray-600 text-sm">
-                    {t('policies.intro.ethics.desc')}
-                  </p>
-                </div>
-                <div className="text-center">
-                  <TrophyIcon className="h-12 w-12 text-yellow-600 mx-auto mb-3" />
-                  <h6 className="text-[#00847e] mb-2 font-semibold">
-                    {t('policies.intro.quality')}
-                  </h6>
-                  <p className="text-gray-600 text-sm">
-                    {t('policies.intro.quality.desc')}
-                  </p>
-                </div>
-                <div className="text-center">
-                  <StarIcon className="h-12 w-12 text-purple-600 mx-auto mb-3" />
-                  <h6 className="text-[#00847e] mb-2 font-semibold">
-                    {t('policies.intro.innovation')}
-                  </h6>
-                  <p className="text-gray-600 text-sm">
-                    {t('policies.intro.innovation.desc')}
-                  </p>
-                </div>
-              </div>
             </div>
-            
             <div className="flex justify-center">
               <Image
                 src="/image/Certificacao_ISO.jpg"
                 alt="Certificação ISO"
-                width={500}
-                height={400}
-                className="rounded-lg shadow-lg"
+                width={400}
+                height={350}
+                className="rounded-xl shadow-lg"
               />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="group relative rounded-2xl border border-slate-200 hover:border-[#00847e]/40 bg-white transition-all duration-300 hover:shadow-lg p-8 overflow-hidden text-center">
+              <div className="w-14 h-14 rounded-xl bg-[#00847e]/10 flex items-center justify-center mb-6 group-hover:bg-[#00847e]/20 transition-colors duration-300 mx-auto">
+                <CheckCircleIcon className="h-7 w-7 text-[#00847e]" />
+              </div>
+              <h4 className="font-bold text-slate-900 text-lg mb-3">{t('policies.intro.transparency')}</h4>
+              <p className="text-slate-600 text-sm leading-relaxed">{t('policies.intro.transparency.desc')}</p>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00847e]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </div>
+
+            <div className="group relative rounded-2xl border border-slate-200 hover:border-[#00847e]/40 bg-white transition-all duration-300 hover:shadow-lg p-8 overflow-hidden text-center">
+              <div className="w-14 h-14 rounded-xl bg-[#00847e]/10 flex items-center justify-center mb-6 group-hover:bg-[#00847e]/20 transition-colors duration-300 mx-auto">
+                <ShieldCheckIcon className="h-7 w-7 text-[#00847e]" />
+              </div>
+              <h4 className="font-bold text-slate-900 text-lg mb-3">{t('policies.intro.ethics')}</h4>
+              <p className="text-slate-600 text-sm leading-relaxed">{t('policies.intro.ethics.desc')}</p>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00847e]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </div>
+
+            <div className="group relative rounded-2xl border border-slate-200 hover:border-[#00847e]/40 bg-white transition-all duration-300 hover:shadow-lg p-8 overflow-hidden text-center">
+              <div className="w-14 h-14 rounded-xl bg-[#00847e]/10 flex items-center justify-center mb-6 group-hover:bg-[#00847e]/20 transition-colors duration-300 mx-auto">
+                <TrophyIcon className="h-7 w-7 text-[#00847e]" />
+              </div>
+              <h4 className="font-bold text-slate-900 text-lg mb-3">{t('policies.intro.quality')}</h4>
+              <p className="text-slate-600 text-sm leading-relaxed">{t('policies.intro.quality.desc')}</p>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00847e]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </div>
+
+            <div className="group relative rounded-2xl border border-slate-200 hover:border-[#00847e]/40 bg-white transition-all duration-300 hover:shadow-lg p-8 overflow-hidden text-center">
+              <div className="w-14 h-14 rounded-xl bg-[#00847e]/10 flex items-center justify-center mb-6 group-hover:bg-[#00847e]/20 transition-colors duration-300 mx-auto">
+                <StarIcon className="h-7 w-7 text-[#00847e]" />
+              </div>
+              <h4 className="font-bold text-slate-900 text-lg mb-3">{t('policies.intro.innovation')}</h4>
+              <p className="text-slate-600 text-sm leading-relaxed">{t('policies.intro.innovation.desc')}</p>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00847e]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Políticas em Accordion - Estilo FAQ */}
-      <section className="px-8 py-40">
-        <div className="container mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-[#00847e] mb-4">
+      {/* Políticas em Accordion */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="inline-flex items-center gap-2 bg-[#00847e]/10 text-[#00847e] text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
+              <DocumentTextIcon className="w-4 h-4" />
+              {t('policies.section.badge') || 'Políticas'}
+            </span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-5 leading-tight">
               {t('policies.section.title')}
-            </h1>
-            <p className="mx-auto mb-24 w-full max-w-2xl text-gray-500 text-xl">
+            </h2>
+            <p className="text-gray-500 text-base max-w-3xl mx-auto leading-relaxed">
               {t('policies.section.subtitle')}
             </p>
           </div>
-          
-          <div className="mx-auto lg:max-w-screen-lg lg:px-20">
+
+          <div className="space-y-3">
             {POLICIES.map((policy, index) => (
               <div
                 key={index}
-                className="mb-4 border border-gray-200 rounded-lg"
+                className="group relative rounded-2xl border border-slate-200 hover:border-[#00847e]/40 bg-white transition-all duration-300 overflow-hidden"
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full px-6 py-4 text-left text-gray-900 hover:text-[#00847e] transition-colors flex items-center justify-between bg-white"
+                  className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-slate-50 transition-colors"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className={`p-2 rounded-lg bg-${policy.color}-100`}>
-                      <policy.icon className={`h-6 w-6 text-${policy.color}-600`} />
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-[#00847e]/10 flex items-center justify-center group-hover:bg-[#00847e]/20 transition-colors">
+                      <policy.icon className="h-6 w-6 text-[#00847e]" />
                     </div>
-                    <span className="font-medium">{t(policy.titleKey)}</span>
+                    <div className="flex items-center gap-3">
+                      <span className="text-sm font-bold text-[#00847e] opacity-60 tracking-wide">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <span className="font-semibold text-slate-900">{t(policy.titleKey)}</span>
+                    </div>
                   </div>
-                  <span className="text-[#00847e] text-lg">
-                    {openIndex === index ? '▼' : '▶'}
+                  <span className="text-[#00847e] text-xl transition-transform duration-300" style={{transform: openIndex === index ? 'rotate(180deg)' : 'rotate(0)'}}>
+                    ▼
                   </span>
                 </button>
                 {openIndex === index && (
-                  <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
+                  <div className="px-6 py-4 bg-slate-50/50 border-t border-slate-200">
                     <div className="space-y-6">
                       {policy.sections.map((section, sectionIndex) => (
-                        <div key={sectionIndex} className="border-l-4 border-gray-200 pl-6">
-                          <h6 className="text-[#00847e] mb-3 font-semibold text-lg">
+                        <div key={sectionIndex} className="border-l-4 border-[#00847e]/30 pl-6">
+                          <h6 className="text-[#00847e] mb-2 font-semibold text-sm uppercase tracking-wide">
                             {t(section.subtitleKey)}
                           </h6>
-                          <p className="text-gray-600 leading-relaxed">
+                          <p className="text-slate-600 text-sm leading-relaxed">
                             {t(section.contentKey)}
                           </p>
                         </div>
@@ -729,17 +754,41 @@ export default function PoliticasPage() {
                     </div>
                   </div>
                 )}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00847e]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             ))}
           </div>
-          
-          <div className="text-center mt-16">
-            <h4 className="text-2xl font-bold text-[#00847e] mb-4">
-              {t('policies.commitment.title')}
-            </h4>
-            <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-              {t('policies.commitment.description')}
-            </p>
+        </div>
+      </section>
+
+      {/* Commitment Section */}
+      <section className="relative py-24 bg-gradient-to-br from-slate-900 via-[#004d4a] to-slate-900 overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#00847e]/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#00847e]/10 rounded-full blur-3xl" />
+        <div className="relative max-w-4xl mx-auto px-6 text-center">
+          <span className="inline-flex items-center gap-2 bg-[#00847e]/20 text-teal-300 text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-8 border border-[#00847e]/30">
+            <span className="flex h-2 w-2 rounded-full bg-[#00847e] animate-pulse"></span>
+            {t('policies.commitment.badge') || 'Compromisso'}
+          </span>
+          <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            {t('policies.commitment.title')}
+          </h2>
+          <p className="text-lg text-teal-50/80 max-w-3xl mx-auto mb-10 leading-relaxed">
+            {t('policies.commitment.description')}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contactos"
+              className="inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-[#00847e] to-teal-600 px-8 py-4 text-white font-semibold shadow-lg shadow-[#00847e]/30 transition-all duration-300 hover:shadow-xl hover:scale-105 hover:-translate-y-1"
+            >
+              {t('policies.commitment.cta') || 'Contacte-nos'}
+            </a>
+            <a
+              href="/empresa"
+              className="inline-flex items-center justify-center gap-3 rounded-xl border-2 border-white/30 bg-white/5 px-8 py-4 text-white font-semibold backdrop-blur-sm transition-all duration-300 hover:border-[#00847e] hover:bg-[#00847e]/10 hover:scale-105 hover:-translate-y-1"
+            >
+              {t('policies.commitment.learn') || 'Saiba Mais'}
+            </a>
           </div>
         </div>
       </section>

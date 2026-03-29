@@ -15,6 +15,7 @@ import {
   ClockIcon,
   DocumentCheckIcon,
   PrinterIcon,
+  ArrowRightIcon,
 } from "@heroicons/react/24/solid";
 
 const PLANS = [
@@ -1275,122 +1276,90 @@ export default function PlanosPage() {
        </section>
 
       {/* Why Choose MAEA */}
-      <section className="relative py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 overflow-hidden">
-        {/* Decorative Background Elements */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-sky-100/40 to-blue-200/20 rounded-full -translate-x-48 -translate-y-48 blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-emerald-100/30 to-teal-200/20 rounded-full translate-x-40 translate-y-40 blur-2xl"></div>
-        
-        <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          {/* Enhanced Header */}
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-4 mb-8 px-8 py-4 bg-white/90 backdrop-blur-sm rounded-full border border-slate-200/60 shadow-xl">
-              <div className="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
-              <span className="text-emerald-600 font-semibold text-lg">Por que escolher a MAEA?</span>
-            </div>
-            
-            <Typography variant="h2" color="blue-gray" className="mb-6 text-5xl lg:text-6xl font-bold">
+      <section className="py-20 bg-gradient-to-b from-white to-slate-50">
+        <div className="max-w-6xl mx-auto px-6">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <span className="inline-flex items-center gap-2 bg-[#00847e]/10 text-[#00847e] text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
+              <span className="flex h-2 w-2 rounded-full bg-[#00847e] animate-pulse"></span>
+              {t('plans.why.badge')}
+            </span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-5 leading-tight">
               {t('plans.why.title')}
-            </Typography>
-            
-            <Typography variant="lead" className="text-slate-600 text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed">
+            </h2>
+            <p className="text-gray-500 text-base max-w-3xl mx-auto leading-relaxed">
               {t('plans.why.description')}
-            </Typography>
+            </p>
           </div>
-          
-          {/* Enhanced Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
+
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {/* Experience Card */}
-            <div className="group bg-white/95 backdrop-blur-sm rounded-3xl p-12 border border-slate-200/60 shadow-xl hover:shadow-2xl hover:shadow-emerald-500/20 transition-all duration-500 transform hover:-translate-y-4 hover:scale-[1.02] min-h-[450px]">
-              <div className="relative mb-10">
-                <div className="w-24 h-24 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl group-hover:shadow-emerald-500/30 transition-all duration-500">
-                  <UserGroupIcon className="h-12 w-12 text-white" />
-                </div>
-                {/* Floating Badge */}
-                <div className="absolute -top-2 -right-2 bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-                  EXPERT
-                </div>
+            <div className="group relative rounded-2xl border border-slate-200 hover:border-[#00847e]/40 bg-white transition-all duration-300 hover:shadow-lg p-8 overflow-hidden">
+              <div className="absolute top-6 right-6 w-12 h-12 rounded-full bg-[#00847e]/10 text-[#00847e] font-bold flex items-center justify-center text-lg">
+                01
               </div>
-              
-              <Typography variant="h5" color="blue-gray" className="mb-6 text-2xl font-bold text-slate-900">
+              <div className="w-14 h-14 rounded-xl bg-[#00847e]/10 flex items-center justify-center mb-6 group-hover:bg-[#00847e]/20 transition-colors duration-300">
+                <UserGroupIcon className="h-7 w-7 text-[#00847e]" />
+              </div>
+              <h3 className="font-bold text-slate-900 text-xl mb-4">
                 {t('plans.why.experience.title')}
-              </Typography>
-              
-              <Typography variant="paragraph" className="text-slate-600 text-lg leading-relaxed">
+              </h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
                 {t('plans.why.experience.description')}
-              </Typography>
-              
-              {/* Decorative Element */}
-              <div className="mt-10 w-20 h-1 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full"></div>
+              </p>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00847e]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-            
+
             {/* Support Card */}
-            <div className="group bg-white/95 backdrop-blur-sm rounded-3xl p-12 border border-slate-200/60 shadow-xl hover:shadow-2xl hover:shadow-sky-500/20 transition-all duration-500 transform hover:-translate-y-4 hover:scale-[1.02] min-h-[450px]">
-              <div className="relative mb-10">
-                <div className="w-24 h-24 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl group-hover:shadow-sky-500/30 transition-all duration-500">
-                  <ClockIcon className="h-12 w-12 text-white" />
-                </div>
-                {/* Floating Badge */}
-                <div className="absolute -top-2 -right-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-                  24/7
-                </div>
+            <div className="group relative rounded-2xl border border-slate-200 hover:border-[#00847e]/40 bg-white transition-all duration-300 hover:shadow-lg p-8 overflow-hidden">
+              <div className="absolute top-6 right-6 w-12 h-12 rounded-full bg-[#00847e]/10 text-[#00847e] font-bold flex items-center justify-center text-lg">
+                02
               </div>
-              
-              <Typography variant="h5" color="blue-gray" className="mb-6 text-2xl font-bold text-slate-900">
+              <div className="w-14 h-14 rounded-xl bg-[#00847e]/10 flex items-center justify-center mb-6 group-hover:bg-[#00847e]/20 transition-colors duration-300">
+                <ClockIcon className="h-7 w-7 text-[#00847e]" />
+              </div>
+              <h3 className="font-bold text-slate-900 text-xl mb-4">
                 {t('plans.why.support.title')}
-              </Typography>
-              
-              <Typography variant="paragraph" className="text-slate-600 text-lg leading-relaxed">
+              </h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
                 {t('plans.why.support.description')}
-              </Typography>
-              
-              {/* Decorative Element */}
-              <div className="mt-10 w-20 h-1 bg-gradient-to-r from-sky-500 to-blue-600 rounded-full"></div>
+              </p>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00847e]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-            
+
             {/* Results Card */}
-            <div className="group bg-white/95 backdrop-blur-sm rounded-3xl p-12 border border-slate-200/60 shadow-xl hover:shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 transform hover:-translate-y-4 hover:scale-[1.02] min-h-[450px]">
-              <div className="relative mb-10">
-                <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl group-hover:shadow-purple-500/30 transition-all duration-500">
-                  <RocketLaunchIcon className="h-12 w-12 text-white" />
-                </div>
-                {/* Floating Badge */}
-                <div className="absolute -top-2 -right-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-                  TOP
-                </div>
+            <div className="group relative rounded-2xl border border-slate-200 hover:border-[#00847e]/40 bg-white transition-all duration-300 hover:shadow-lg p-8 overflow-hidden">
+              <div className="absolute top-6 right-6 w-12 h-12 rounded-full bg-[#00847e]/10 text-[#00847e] font-bold flex items-center justify-center text-lg">
+                03
               </div>
-              
-              <Typography variant="h5" color="blue-gray" className="mb-6 text-2xl font-bold text-slate-900">
+              <div className="w-14 h-14 rounded-xl bg-[#00847e]/10 flex items-center justify-center mb-6 group-hover:bg-[#00847e]/20 transition-colors duration-300">
+                <RocketLaunchIcon className="h-7 w-7 text-[#00847e]" />
+              </div>
+              <h3 className="font-bold text-slate-900 text-xl mb-4">
                 {t('plans.why.results.title')}
-              </Typography>
-              
-              <Typography variant="paragraph" className="text-slate-600 text-lg leading-relaxed">
+              </h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
                 {t('plans.why.results.description')}
-              </Typography>
-              
-              {/* Decorative Element */}
-              <div className="mt-10 w-20 h-1 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-full"></div>
+              </p>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00847e]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           </div>
-          
-          {/* Enhanced Bottom Section */}
-          <div className="mt-20 text-center">
-            <div className="bg-gradient-to-r from-slate-100/80 to-blue-100/60 backdrop-blur-sm rounded-3xl p-10 border border-slate-200/40 max-w-4xl mx-auto">
-              <h6 className="text-slate-700 font-bold text-2xl mb-6">
-                ✨ Garantimos resultados excepcionais em todos os projetos
-              </h6>
-              <div className="flex flex-wrap items-center justify-center gap-8 text-slate-600 text-lg">
-                <span className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-emerald-500 rounded-full"></div>
-                  Certificação Garantida
-                </span>
-                <span className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-sky-500 rounded-full"></div>
-                  Suporte Premium
-                </span>
-                <span className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                  Resultados Comprovados
-                </span>
+
+          {/* Bottom Trust Bar */}
+          <div className="rounded-2xl border border-[#00847e]/20 bg-gradient-to-br from-[#00847e]/5 to-transparent p-8">
+            <div className="flex flex-wrap items-center justify-center gap-10">
+              <div className="flex items-center gap-3">
+                <div className="w-2.5 h-2.5 bg-[#00847e] rounded-full"></div>
+                <span className="text-slate-700 font-medium text-sm">Certificação Garantida</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-2.5 h-2.5 bg-[#00847e] rounded-full"></div>
+                <span className="text-slate-700 font-medium text-sm">Suporte Premium</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-2.5 h-2.5 bg-[#00847e] rounded-full"></div>
+                <span className="text-slate-700 font-medium text-sm">Resultados Comprovados</span>
               </div>
             </div>
           </div>
@@ -1398,58 +1367,48 @@ export default function PlanosPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-900">
-        <div className="container mx-auto px-4 text-center">
-          <Typography variant="h2" color="white" className="mb-4">
+      <section className="relative py-24 bg-gradient-to-br from-slate-900 via-[#004d4a] to-slate-900 overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#00847e]/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#00847e]/10 rounded-full blur-3xl" />
+        <div className="relative max-w-4xl mx-auto px-6 text-center">
+          <span className="inline-flex items-center gap-2 bg-[#00847e]/20 text-teal-300 text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-8 border border-[#00847e]/30">
+            <span className="flex h-2 w-2 rounded-full bg-[#00847e] animate-pulse"></span>
+            {t('plans.cta.badge')}
+          </span>
+          <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             {t('plans.cta.title')}
-          </Typography>
-          <Typography variant="lead" color="white" className="mb-8 opacity-90">
+          </h2>
+          <p className="text-lg text-teal-50/80 max-w-3xl mx-auto mb-10 leading-relaxed">
             {t('plans.cta.description')}
-          </Typography>
-          <div className="flex flex-wrap gap-6 justify-center">
-            {/* Botão Principal - Contactar */}
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition-all duration-500"></div>
-              <Button 
-                color="white" 
-                variant="filled" 
-                className="bg-gradient-to-r from-[#00847e] to-[#00847e]/80 hover:from-[#00847e]/90 hover:to-[#00847e] text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-0"
-              >
-                <a href="/contactos" className="flex items-center gap-3 text-white">
-                  <div className="relative">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full border-2 border-emerald-500 animate-pulse"></div>
-                  </div>
-                  <span className="text-lg">{t('plans.cta.contact')}</span>
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </a>
-              </Button>
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <a
+              href="/contactos"
+              className="inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-[#00847e] to-teal-600 px-8 py-4 text-white font-semibold shadow-lg shadow-[#00847e]/30 transition-all duration-300 hover:shadow-xl hover:shadow-[#00847e]/40 hover:scale-105 hover:-translate-y-1"
+            >
+              {t('plans.cta.contact')}
+              <ArrowRightIcon className="w-5 h-5" />
+            </a>
+            <a
+              href="/sobreiso"
+              className="inline-flex items-center gap-3 rounded-xl border-2 border-white/30 bg-white/5 px-8 py-4 text-white font-semibold backdrop-blur-sm transition-all duration-300 hover:border-[#00847e] hover:bg-[#00847e]/10 hover:scale-105 hover:-translate-y-1"
+            >
+              {t('plans.cta.certification')}
+              <ArrowRightIcon className="w-5 h-5" />
+            </a>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-12 border-t border-white/10">
+            <div className="flex flex-col items-center">
+              <div className="text-3xl font-bold text-[#00847e] mb-2">24h</div>
+              <p className="text-sm text-teal-50/60">Resposta Garantida</p>
             </div>
-
-            {/* Botão Secundário - Saber Mais */}
-            <div className="group relative">
-              <div className="absolute inset-0 bg-[#00847e] rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-all duration-500"></div>
-              <Button 
-                size="lg" 
-                className="relative bg-[#00847e] hover:bg-[#006d68] text-white font-semibold px-6 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0 min-w-[200px]"
-              >
-                <a href="/sobreiso" className="flex items-center gap-3 text-white">
-                  <div className="relative">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full border-2 border-[#00847e] animate-pulse"></div>
-                  </div>
-                  <span className="text-base">{t('plans.cta.certification')}</span>
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </a>
-              </Button>
+            <div className="flex flex-col items-center">
+              <div className="text-3xl font-bold text-[#00847e] mb-2">Sem Custos</div>
+              <p className="text-sm text-teal-50/60">Diagnóstico Inicial</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="text-3xl font-bold text-[#00847e] mb-2">100%</div>
+              <p className="text-sm text-teal-50/60">Aprovação em Auditoria</p>
             </div>
           </div>
         </div>

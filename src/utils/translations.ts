@@ -121,12 +121,14 @@ export const TRANSLATIONS = {
     'services.training.feature3': 'Workshops práticos',
 
     // Company
+    'company.hero.badge': 'Sobre Nós',
     'company.hero.title': 'Sobre a MAEA',
     'company.hero.description': 'Especialistas em consultoria empresarial e certificação ISO para o sector Privado & Publico. Com mais de 3 anos de experiência, somos líderes em soluções de qualidade e gestão empresarial em Angola e na região.',
     'company.hero.cta.services': 'Nossos Serviços',
     'company.hero.cta.contact': 'Contactar',
 
     // Team
+    'company.team.badge': 'Equipa Experiente',
     'company.team.title': 'Nossa Equipe',
     'company.team.subtitle': 'Profissionais experientes e certificados com vasta experiência no setor petrolífero e industrial',
     'company.team.elizabeth.name': 'Elizabeth Narciso',
@@ -140,18 +142,22 @@ export const TRANSLATIONS = {
     'company.team.borges.description': 'Especialista em gestão de projetos de certificação e auditorias de sistemas de gestão.',
 
     // Experience
+    'company.experience.badge': 'Trajetória',
     'company.experience.title': 'Nossa Experiência',
     'company.experience.description': 'Mais de 3 anos de experiência em diversos setores',
-    'company.experience.iso': 'Certificação ISO',
-    'company.experience.petroleum': 'Setor Petrolífero',
-    'company.experience.engineering': 'Engenharia',
-    'company.experience.management': 'Gestão Empresarial',
+    'company.experience.iso': 'Certificação ISO em diversos setores industriais',
+    'company.experience.petroleum': 'Consultoria especializada no setor petrolífero e energia',
+    'company.experience.engineering': 'Engenharia de processos e melhoria contínua',
+    'company.experience.management': 'Gestão empresarial e transformação organizacional',
 
     // Company Mission, Vision & Values
+    'company.mission.badge': 'Missão',
     'company.mission.title': 'Nossa Missão',
     'company.mission.description': 'Fornecer soluções de consultoria e certificação ISO de excelência, contribuindo para o desenvolvimento sustentável e competitivo das empresas angolanas, especialmente no setor petrolífero.',
+    'company.vision.badge': 'Visão',
     'company.vision.title': 'Nossa Visão',
     'company.vision.description': 'Ser a empresa de referência em consultoria empresarial e certificação ISO em Angola, reconhecida pela qualidade dos serviços e impacto positivo no desenvolvimento empresarial.',
+    'company.values.badge': 'Valores',
     'company.values.title': 'Nossos Valores',
     'company.values.subtitle': 'Princípios que orientam nossa atuação e definem nossa cultura organizacional.',
     'company.values.excellence': 'Excelência',
@@ -183,6 +189,11 @@ export const TRANSLATIONS = {
     
     // Company Page - Additional Keys
     'company.portfolio.view': 'Ver Portfólio',
+    'company.cta.badge': 'Próximo Passo',
+    'company.cta.title': 'Vamos Transformar Seu Negócio?',
+    'company.cta.description': 'Entre em contacto conosco para descobrir como podemos implementar as melhores práticas de gestão e certificação na sua empresa.',
+    'company.cta.contact': 'Solicitar Diagnóstico Gratuito',
+    'company.cta.services': 'Conhecer Nossos Serviços',
     'company.certification.floating.title': 'Certificação',
     'company.certification.floating.subtitle': '',
     'company.certification.floating.tooltip.title': 'Certificação ISO',
@@ -216,6 +227,7 @@ export const TRANSLATIONS = {
     'sobreiso.what.standards.description': 'As certificações ISO são reconhecidas mundialmente e abrem portas para novos mercados e oportunidades de negócio.',
 
     // Solutions
+    'sobreiso.solutions.badge': 'Padrões de Qualidade',
     'sobreiso.solutions.title': 'Soluções para os seus desafios',
     'sobreiso.solutions.subtitle': 'Descubra quais padrões a comunidade ISO desenvolveu para atender às necessidades do seu setor!',
     'sobreiso.solutions.what_is.title': 'O que é um padrão?',
@@ -312,6 +324,7 @@ export const TRANSLATIONS = {
     'plans.ultimate.feature11': 'Consultoria contínua',
     
     // Policies
+    'policies.hero.badge': 'Princípios Institucionais',
     'policies.hero.title': 'Políticas da MAEA',
     'policies.hero.description': 'Nossos compromissos e princípios que guiam todas as nossas ações. Acreditamos na transparência e na responsabilidade social como pilares fundamentais do nosso sucesso empresarial.',
     'policies.hero.cta.company': 'Conhecer a Empresa',
@@ -320,6 +333,7 @@ export const TRANSLATIONS = {
     'policies.print.button': 'Imprimir Políticas',
 
     // Policies Introduction
+    'policies.intro.badge': 'A Nossa Visão',
     'policies.intro.title': 'Nossas Políticas Institucionais',
     'policies.intro.description1': 'As políticas institucionais da MAEA estabelecem os princípios fundamentais que orientam todas as nossas atividades e relacionamentos com clientes, parceiros e stakeholders.',
     'policies.intro.description2': 'Estas políticas refletem nosso compromisso com a excelência, transparência e responsabilidade social, garantindo que todos os nossos serviços sejam prestados com os mais altos padrões de qualidade e ética.',
@@ -333,12 +347,16 @@ export const TRANSLATIONS = {
     'policies.intro.innovation.desc': 'Melhoria contínua e soluções criativas.',
 
     // Policies Section
+    'policies.section.badge': 'Políticas',
     'policies.section.title': 'Políticas Institucionais',
     'policies.section.subtitle': 'Conheça os princípios que orientam nossa atuação e garantem a qualidade dos nossos serviços.',
 
     // Policies Commitment
+    'policies.commitment.badge': 'Próximo Passo',
     'policies.commitment.title': 'Nosso Compromisso',
     'policies.commitment.description': 'Comprometemo-nos a cumprir rigorosamente todas as políticas institucionais, garantindo que cada interação e serviço reflita nossos valores de excelência, integridade e responsabilidade social.',
+    'policies.commitment.cta': 'Contacte-nos',
+    'policies.commitment.learn': 'Saiba Mais',
 
     // Detailed Policies
     'policies.impartiality.title': 'Política de Imparcialidade',
@@ -488,6 +506,7 @@ export const TRANSLATIONS = {
     'plans.hero.description': 'Soluções personalizadas para diferentes necessidades empresariais. Escolha o plano que melhor se adapta aos seus objetivos.',
     'plans.hero.cta.contact': 'Contactar',
     'plans.hero.cta.certification': 'Certificação',
+    'plans.why.badge': 'As Nossas Vantagens',
     'plans.why.title': 'Por que escolher a MAEA?',
     'plans.why.description': 'Descubra as vantagens de trabalhar com especialistas experientes em certificação ISO.',
     'plans.why.experience.title': 'Experiência Comprovada',
@@ -496,6 +515,7 @@ export const TRANSLATIONS = {
     'plans.why.support.description': 'Acompanhamento desde o diagnóstico inicial até a manutenção da certificação.',
     'plans.why.results.title': 'Resultados Garantidos',
     'plans.why.results.description': '100% de aprovação nas auditorias de certificação com metodologias comprovadas.',
+    'plans.cta.badge': 'Próximo Passo',
     'plans.cta.title': 'Pronto para começar?',
     'plans.cta.description': 'Entre em contacto connosco para obter um orçamento personalizado e iniciar o processo de certificação.',
     'plans.cta.contact': 'Contactar Agora',
@@ -503,10 +523,12 @@ export const TRANSLATIONS = {
     'plans.print.all': 'Imprimir Planos',
 
     // Solutions
+    'solucoes.hero.badge': 'Soluções por Setor',
     'solucoes.hero.title': 'Soluções Especializadas',
     'solucoes.hero.description': 'Oferecemos soluções personalizadas para diferentes setores industriais, com foco em certificação ISO e melhoria de processos.',
     'solucoes.hero.cta.certification': 'Certificação',
     'solucoes.hero.cta.contact': 'Contactar',
+    'solucoes.cta.badge': 'Próximo Passo',
     'solucoes.cta.title': 'Pronto para Transformar sua Empresa?',
     'solucoes.cta.description': 'Entre em contacto connosco para obter uma solução personalizada para as necessidades específicas da sua empresa.',
     'solucoes.cta.contact': 'Contactar Agora',
@@ -532,8 +554,9 @@ export const TRANSLATIONS = {
     'contact.success.close': 'Fechar',
 
     // FAQ
-    'faq.section.title': 'Perguntas Frequentes',
-    'faq.section.subtitle': 'Encontre respostas para as principais dúvidas sobre nossos serviços de consultoria e certificação ISO.',
+    'faq.section.badge': 'Perguntas Frequentes',
+    'faq.section.title': 'Tudo o que precisa de saber sobre\ncertificação ISO',
+    'faq.section.subtitle': 'Encontre respostas para as principais dúvidas sobre os nossos serviços de consultoria e certificação ISO. Não encontrou o que procura? Fale connosco.',
     'faq.time.title': 'Quanto tempo demora o processo de certificação ISO?',
     'faq.time.description': 'O processo de certificação ISO normalmente demora entre 3 a 6 meses, dependendo do tamanho da empresa e da complexidade dos processos. Incluindo preparação, implementação, auditoria interna e auditoria de certificação.',
     'faq.benefits.title': 'Quais são os principais benefícios da certificação ISO?',
@@ -553,8 +576,12 @@ export const TRANSLATIONS = {
 
     // FAQ CTA Card
     'faq.cta.title': 'Ainda tem dúvidas?',
-    'faq.cta.description': 'Entre em contacto connosco para obter respostas personalizadas às suas questões.',
-    'faq.cta.button': 'Contactar Agora',
+    'faq.cta.description': 'A nossa equipa de especialistas está disponível para esclarecer todas as suas questões e guiá-lo no caminho para a certificação.',
+    'faq.cta.button': 'Falar com um Especialista',
+    'faq.cta.plans': 'Ver os Nossos Planos',
+    'faq.cta.badge1': 'Resposta em 24h',
+    'faq.cta.badge2': 'Especialistas certificados',
+    'faq.cta.badge3': 'Consulta inicial gratuita',
 
     // Why MAEA Section
     'why.maea.title': 'Por que escolher a MAEA?',
@@ -712,6 +739,7 @@ export const TRANSLATIONS = {
     'consulting.hero.cta': 'Contactar',
 
     // Consulting Services
+    'consulting.services.badge': 'Serviços Especializados',
     'consulting.services.title': 'Nossos Serviços de Consultoria',
     'consulting.services.subtitle': 'Soluções especializadas em gestão empresarial e otimização de processos para o setor petrolífero e industrial.',
     'consulting.services.business.title': 'Consultoria Empresarial',
@@ -756,6 +784,8 @@ export const TRANSLATIONS = {
     'consulting.services.technical.feature3': 'Melhoria de processos técnicos',
     'consulting.services.technical.feature4': 'Implementação de tecnologias',
 
+    'consulting.services.learn_more': 'Saber Mais',
+
     // Process Steps
     'consulting.process.title': 'Nosso Processo de Consultoria',
     'consulting.process.subtitle': 'Metodologia estruturada e comprovada para garantir resultados excepcionais em todos os projetos.',
@@ -773,7 +803,9 @@ export const TRANSLATIONS = {
     'consulting.process.step4.description': 'Acompanhamento e ajustes contínuos',
 
     // Consulting Benefits
+    'consulting.benefits.badge': 'Vantagens Competitivas',
     'consulting.benefits.title': 'Benefícios da Nossa Consultoria',
+    'consulting.benefits.subtitle': 'Descubra como nossa consultoria pode impulsionar o seu negócio com soluções comprovadas e resultados mensuráveis.',
     'consulting.benefits.results.title': 'Resultados Comprovados',
     'consulting.benefits.results.description': 'Metodologias testadas e comprovadas que garantem melhorias mensuráveis na eficiência operacional e rentabilidade.',
     'consulting.benefits.team.title': 'Equipe Especializada',
@@ -784,6 +816,7 @@ export const TRANSLATIONS = {
     'consulting.benefits.support.description': 'Acompanhamento e suporte técnico contínuo para garantir a manutenção dos resultados alcançados.',
 
     // Consulting CTA
+    'consulting.cta.badge': 'Próximo Passo',
     'consulting.cta.title': 'Pronto para Transformar seu Negócio?',
     'consulting.cta.description': 'Entre em contacto connosco hoje e descubra como nossa consultoria especializada pode impulsionar o sucesso da sua empresa.',
     'consulting.cta.consulting': 'Solicitar Consultoria',
@@ -911,6 +944,7 @@ export const TRANSLATIONS = {
     'projects.tlcn.results.title': 'Resultados Alcançados',
     'projects.tlcn.results.description': 'Sistema de gestão da qualidade implementado com sucesso, processos otimizados e equipe capacitada para manutenção contínua.',
 
+    'projects.omf.sector': 'Serviços Petrolíferos',
     'projects.omf.description': 'Empresa de prestação de serviços especializada no setor petrolífero.',
     'projects.omf.focus.title': 'Áreas de Foco',
     'projects.omf.focus1': 'Setor Petrolífero',
@@ -924,6 +958,7 @@ export const TRANSLATIONS = {
     'projects.omf.results.title': 'Resultados Alcançados',
     'projects.omf.results.description': 'Sistemas de gestão integrados implementados, conformidade com padrões internacionais e melhoria significativa na segurança operacional.',
 
+    'projects.microtech.sector': 'Tecnologia e Telecomunicações',
     'projects.microtech.description': 'Empresa de fornecimento de equipamentos informáticos e telecomunicações.',
     'projects.microtech.focus.title': 'Áreas de Foco',
     'projects.microtech.focus1': 'Equipamentos Informáticos',
@@ -937,6 +972,7 @@ export const TRANSLATIONS = {
     'projects.microtech.results.title': 'Resultados Alcançados',
     'projects.microtech.results.description': 'Sistemas de segurança da informação implementados, processos de TI otimizados e conformidade com padrões internacionais.',
 
+    'projects.senega.sector': 'Bens Alimentares',
     'projects.senega.description': 'Empresa de fornecimento de bens alimentares.',
     'projects.senega.focus.title': 'Áreas de Foco',
     'projects.senega.focus1': 'Bens Alimentares',
@@ -950,6 +986,7 @@ export const TRANSLATIONS = {
     'projects.senega.results.title': 'Resultados Alcançados',
     'projects.senega.results.description': 'Sistema de segurança alimentar implementado, controles de qualidade estabelecidos e conformidade com regulamentações internacionais.',
 
+    'projects.sofama.sector': 'Estofos e Restauros de Alta Qualidade',
     'projects.sofama.description': 'Empresa especializada em estofos novos e restauros de alta qualidade.',
     'projects.sofama.focus.title': 'Áreas de Foco',
     'projects.sofama.focus1': 'Estofos Novos',
@@ -963,6 +1000,7 @@ export const TRANSLATIONS = {
     'projects.sofama.results.title': 'Resultados Alcançados',
     'projects.sofama.results.description': 'Processos de qualidade padronizados, artesanato reconhecido internacionalmente e sistema de gestão ambiental implementado.',
 
+    'projects.methodology.badge': 'O Nosso Processo',
     'projects.methodology.title': 'Nossa Metodologia de Implementação',
     'projects.methodology.subtitle': 'Processo estruturado e comprovado para implementação bem-sucedida de sistemas ISO.',
 
@@ -978,6 +1016,7 @@ export const TRANSLATIONS = {
     'projects.methodology.step4.title': 'Certificação',
     'projects.methodology.step4.description': 'Preparação para auditoria e obtenção da certificação ISO.',
 
+    'projects.results.badge': 'Impacto Real',
     'projects.results.title': 'Resultados e Benefícios',
     'projects.results.subtitle': 'Transformações alcançadas através da implementação de sistemas de gestão da qualidade.',
 
@@ -990,6 +1029,7 @@ export const TRANSLATIONS = {
     'projects.results.market.title': 'Acesso ao Mercado',
     'projects.results.market.description': 'Abertura de novos mercados e oportunidades de negócio.',
 
+    'projects.cta.badge': 'Próximo Passo',
     'projects.cta.title': 'Pronto para Transformar sua Empresa?',
     'projects.cta.description': 'Entre em contacto connosco e descubra como podemos ajudar a implementar sistemas de gestão da qualidade na sua empresa.',
     'projects.cta.contact': 'Contactar Agora',
@@ -1203,6 +1243,17 @@ export const TRANSLATIONS = {
     'company.values.competitive.desc': 'Differential advantage through innovation and efficiency.',
     
     // Company Page - Additional Keys
+    'company.hero.badge': 'About Us',
+    'company.mission.badge': 'Mission',
+    'company.vision.badge': 'Vision',
+    'company.values.badge': 'Values',
+    'company.team.badge': 'Experienced Team',
+    'company.experience.badge': 'Our Journey',
+    'company.cta.badge': 'Next Step',
+    'company.cta.title': "Let's Transform Your Business?",
+    'company.cta.description': 'Contact us to discover how we can implement the best management and certification practices in your company.',
+    'company.cta.contact': 'Request Free Diagnosis',
+    'company.cta.services': 'Learn About Our Services',
     'company.portfolio.view': 'View Portfolio',
     'company.certification.floating.title': 'Certification',
     'company.certification.floating.subtitle': '',
@@ -1237,6 +1288,7 @@ export const TRANSLATIONS = {
     'sobreiso.what.standards.description': 'ISO certifications are recognized worldwide and open doors to new markets and business opportunities.',
 
     // Solutions
+    'sobreiso.solutions.badge': 'Quality Standards',
     'sobreiso.solutions.title': 'Solutions for your challenges',
     'sobreiso.solutions.subtitle': 'Discover which standards the ISO community has developed to meet your sector\'s needs!',
     'sobreiso.solutions.what_is.title': 'What is a standard?',
@@ -1354,6 +1406,7 @@ export const TRANSLATIONS = {
     'projects.tlcn.results.title': 'Results Achieved',
     'projects.tlcn.results.description': 'Quality management system successfully implemented, optimized processes and trained team for continuous maintenance.',
 
+    'projects.omf.sector': 'Petroleum Services',
     'projects.omf.description': 'Service company specialized in the petroleum sector.',
     'projects.omf.focus.title': 'Focus Areas',
     'projects.omf.focus1': 'Petroleum Sector',
@@ -1367,6 +1420,7 @@ export const TRANSLATIONS = {
     'projects.omf.results.title': 'Results Achieved',
     'projects.omf.results.description': 'Integrated management systems implemented, compliance with international standards and significant improvement in operational safety.',
 
+    'projects.microtech.sector': 'Technology & Telecommunications',
     'projects.microtech.description': 'Company supplying IT and telecommunications equipment.',
     'projects.microtech.focus.title': 'Focus Areas',
     'projects.microtech.focus1': 'IT Equipment',
@@ -1380,6 +1434,7 @@ export const TRANSLATIONS = {
     'projects.microtech.results.title': 'Results Achieved',
     'projects.microtech.results.description': 'Information security systems implemented, IT processes optimized and compliance with international standards.',
 
+    'projects.senega.sector': 'Food Goods',
     'projects.senega.description': 'Company supplying food goods.',
     'projects.senega.focus.title': 'Focus Areas',
     'projects.senega.focus1': 'Food Goods',
@@ -1393,6 +1448,7 @@ export const TRANSLATIONS = {
     'projects.senega.results.title': 'Results Achieved',
     'projects.senega.results.description': 'Food safety system implemented, quality controls established and compliance with international regulations.',
 
+    'projects.sofama.sector': 'Upholstery & High-Quality Restorations',
     'projects.sofama.description': 'Company specialized in new upholstery and high-quality restorations.',
     'projects.sofama.focus.title': 'Focus Areas',
     'projects.sofama.focus1': 'New Upholstery',
@@ -1406,6 +1462,7 @@ export const TRANSLATIONS = {
     'projects.sofama.results.title': 'Results Achieved',
     'projects.sofama.results.description': 'Standardized quality processes, internationally recognized craftsmanship and environmental management system implemented.',
 
+    'projects.methodology.badge': 'Our Process',
     'projects.methodology.title': 'Our Implementation Methodology',
     'projects.methodology.subtitle': 'Structured and proven process for successful ISO system implementation.',
 
@@ -1421,6 +1478,7 @@ export const TRANSLATIONS = {
     'projects.methodology.step4.title': 'Certification',
     'projects.methodology.step4.description': 'Preparation for audit and obtaining ISO certification.',
 
+    'projects.results.badge': 'Real Impact',
     'projects.results.title': 'Results and Benefits',
     'projects.results.subtitle': 'Transformations achieved through implementation of quality management systems.',
 
@@ -1439,6 +1497,7 @@ export const TRANSLATIONS = {
     'projects.cta.services': 'Our Services',
     
     // Policies
+    'policies.hero.badge': 'Institutional Principles',
     'policies.hero.title': 'MAEA Policies',
     'policies.hero.description': 'Our commitments and principles that guide all our actions. We believe in transparency and social responsibility as fundamental pillars of our business success.',
     'policies.hero.cta.company': 'Learn About the Company',
@@ -1447,6 +1506,7 @@ export const TRANSLATIONS = {
     'policies.print.button': 'Print Policies',
 
     // Policies Introduction
+    'policies.intro.badge': 'Our Vision',
     'policies.intro.title': 'Our Institutional Policies',
     'policies.intro.description1': 'MAEA\'s institutional policies establish the fundamental principles that guide all our activities and relationships with clients, partners and stakeholders.',
     'policies.intro.description2': 'These policies reflect our commitment to excellence, transparency and social responsibility, ensuring that all our services are provided with the highest standards of quality and ethics.',
@@ -1460,12 +1520,16 @@ export const TRANSLATIONS = {
     'policies.intro.innovation.desc': 'Continuous improvement and creative solutions.',
 
     // Policies Section
+    'policies.section.badge': 'Policies',
     'policies.section.title': 'Institutional Policies',
     'policies.section.subtitle': 'Learn about the principles that guide our work and ensure the quality of our services.',
 
     // Policies Commitment
+    'policies.commitment.badge': 'Next Step',
     'policies.commitment.title': 'Our Commitment',
-    'policies.commitment.description': 'We are committed to strictly comply with all institutional policies, ensuring that every interaction and service reflects our values of excellence, integrity and social responsibility.',
+    'policies.commitment.description': 'We are committed to strictly comply with all institutional policies, ensuring that each interaction and service reflects our values of excellence, integrity and social responsibility.',
+    'policies.commitment.cta': 'Contact Us',
+    'policies.commitment.learn': 'Learn More',
 
     // Detailed Policies
     'policies.impartiality.title': 'Impartiality Policy',
@@ -1615,6 +1679,7 @@ export const TRANSLATIONS = {
     'plans.hero.description': 'Personalized solutions for different business needs. Choose the plan that best fits your objectives.',
     'plans.hero.cta.contact': 'Contact',
     'plans.hero.cta.certification': 'Certification',
+    'plans.why.badge': 'Our Advantages',
     'plans.why.title': 'Why choose MAEA?',
     'plans.why.description': 'Discover the advantages of working with experienced ISO certification specialists.',
     'plans.why.experience.title': 'Proven Experience',
@@ -1623,6 +1688,7 @@ export const TRANSLATIONS = {
     'plans.why.support.description': 'Follow-up from initial diagnosis to certification maintenance.',
     'plans.why.results.title': 'Guaranteed Results',
     'plans.why.results.description': '100% approval in certification audits with proven methodologies.',
+    'plans.cta.badge': 'Next Step',
     'plans.cta.title': 'Ready to start?',
     'plans.cta.description': 'Contact us to get a personalized quote and start the certification process.',
     'plans.cta.contact': 'Contact Now',
@@ -1659,8 +1725,9 @@ export const TRANSLATIONS = {
     'contact.success.close': 'Close',
 
     // FAQ
-    'faq.section.title': 'Frequently Asked Questions',
-    'faq.section.subtitle': 'Find answers to the main questions about our consulting and ISO certification services.',
+    'faq.section.badge': 'Frequently Asked Questions',
+    'faq.section.title': 'Everything you need to know about\nISO certification',
+    'faq.section.subtitle': 'Find answers to the main questions about our consulting and ISO certification services. Didn\'t find what you\'re looking for? Talk to us.',
     'faq.time.title': 'How long does the ISO certification process take?',
     'faq.time.description': 'The ISO certification process typically takes 3 to 6 months, depending on company size and process complexity. Including preparation, implementation, internal audit and certification audit.',
     'faq.benefits.title': 'What are the main benefits of ISO certification?',
@@ -1680,8 +1747,12 @@ export const TRANSLATIONS = {
 
     // FAQ CTA Card
     'faq.cta.title': 'Still have questions?',
-    'faq.cta.description': 'Contact us to get personalized answers to your questions.',
-    'faq.cta.button': 'Contact Now',
+    'faq.cta.description': 'Our team of experts is available to answer all your questions and guide you on the path to certification.',
+    'faq.cta.button': 'Talk to an Expert',
+    'faq.cta.plans': 'View Our Plans',
+    'faq.cta.badge1': 'Response within 24h',
+    'faq.cta.badge2': 'Certified experts',
+    'faq.cta.badge3': 'Free initial consultation',
 
     // Why MAEA Section
     'why.maea.title': 'Why choose MAEA?',
@@ -1839,6 +1910,7 @@ export const TRANSLATIONS = {
     'consulting.hero.cta': 'Contact',
 
     // Consulting Services
+    'consulting.services.badge': 'Specialized Services',
     'consulting.services.title': 'Our Consulting Services',
     'consulting.services.subtitle': 'Specialized solutions in business management and process optimization for the oil and gas and industrial sector.',
     'consulting.services.business.title': 'Business Consulting',
@@ -1883,6 +1955,8 @@ export const TRANSLATIONS = {
     'consulting.services.technical.feature3': 'Technical process improvement',
     'consulting.services.technical.feature4': 'Technology implementation',
 
+    'consulting.services.learn_more': 'Learn More',
+
     // Process Steps
     'consulting.process.title': 'Our Consulting Process',
     'consulting.process.subtitle': 'Structured and proven methodology to ensure exceptional results in all projects.',
@@ -1900,7 +1974,9 @@ export const TRANSLATIONS = {
     'consulting.process.step4.description': 'Continuous follow-up and adjustments',
 
     // Consulting Benefits
+    'consulting.benefits.badge': 'Competitive Advantages',
     'consulting.benefits.title': 'Benefits of Our Consulting',
+    'consulting.benefits.subtitle': 'Discover how our consulting can drive your business forward with proven solutions and measurable results.',
     'consulting.benefits.results.title': 'Proven Results',
     'consulting.benefits.results.description': 'Tested and proven methodologies that guarantee measurable improvements in operational efficiency and profitability.',
     'consulting.benefits.team.title': 'Specialized Team',
@@ -1911,6 +1987,7 @@ export const TRANSLATIONS = {
     'consulting.benefits.support.description': 'Continuous follow-up and technical support to ensure maintenance of achieved results.',
 
     // Consulting CTA
+    'consulting.cta.badge': 'Next Step',
     'consulting.cta.title': 'Ready to Transform Your Business?',
     'consulting.cta.description': 'Contact us today and discover how our specialized consulting can drive your company\'s success.',
     'consulting.cta.consulting': 'Request Consulting',

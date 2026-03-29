@@ -346,117 +346,157 @@ export default function SolucoesPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-slate-900 to-slate-700 py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 gap-12 items-center">
-            <div className="text-center max-w-4xl mx-auto">
-              <Typography variant="h1" color="white" className="mb-6">
-                {t('solucoes.hero.title')}
-              </Typography>
-              <Typography variant="lead" color="white" className="mb-8 opacity-90">
-                {t('solucoes.hero.description')}
-              </Typography>
-              <div className="flex flex-wrap gap-4 justify-center">
-                <Button 
-                  color="white" 
-                  variant="filled" 
-                  className="bg-gradient-to-r from-[#00847e] to-[#00847e]/80 hover:from-[#00847e]/90 hover:to-[#00847e] text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-0"
-                >
-                  <a href="/sobreiso" className="text-slate-900">{t('solucoes.hero.cta.certification')}</a>
-                </Button>
-                <Button 
-                  color="white" 
-                  variant="outlined"
-                  className="bg-gradient-to-r from-[#00847e] to-[#00847e]/80 hover:from-[#00847e]/90 hover:to-[#00847e] text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-0"
-                >
-                  <a href="/contactos" className="text-white">{t('solucoes.hero.cta.contact')}</a>
-                </Button>
-              </div>
-            </div>
+      <section className="relative bg-gradient-to-br from-slate-800 via-slate-900 to-[#004d4a] py-24 overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]" style={{backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '48px 48px'}} />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#00847e]/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#00847e]/10 rounded-full blur-3xl" />
+        <div className="relative max-w-4xl mx-auto px-6 text-center">
+          <span className="inline-flex items-center gap-2 bg-[#00847e]/20 text-teal-300 text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-8 border border-[#00847e]/30">
+            <span className="flex h-2 w-2 rounded-full bg-[#00847e] animate-pulse"></span>
+            {t('solucoes.hero.badge')}
+          </span>
+          <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            {t('solucoes.hero.title')}
+          </h1>
+          <p className="text-lg text-teal-50/80 max-w-3xl mx-auto mb-10 leading-relaxed">
+            {t('solucoes.hero.description')}
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <a
+              href="/sobreiso"
+              className="inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-[#00847e] to-teal-600 px-8 py-4 text-white font-semibold shadow-lg shadow-[#00847e]/30 transition-all duration-300 hover:shadow-xl hover:scale-105 hover:-translate-y-1"
+            >
+              {t('solucoes.hero.cta.certification')}
+              <ArrowRightIcon className="w-5 h-5" />
+            </a>
+            <a
+              href="/contactos"
+              className="inline-flex items-center gap-3 rounded-xl border-2 border-white/30 bg-white/5 px-8 py-4 text-white font-semibold backdrop-blur-sm transition-all duration-300 hover:border-[#00847e] hover:bg-[#00847e]/10 hover:scale-105 hover:-translate-y-1"
+            >
+              {t('solucoes.hero.cta.contact')}
+            </a>
           </div>
         </div>
       </section>
 
-                           {/* Modern Floating Navigation Menu */}
-         <div className="fixed left-3 top-1/2 transform -translate-y-1/2 z-50 mt-8">
-           <div className="bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-slate-200 p-2 max-h-[500px] overflow-y-auto">
-             <div className="space-y-1">
-               {SOLUTIONS.map((solution) => (
-                 <a
-                   key={solution.id}
-                   href={`#${solution.id}`}
-                   className="group flex items-center gap-2 px-3 py-2 text-xs bg-gradient-to-r from-slate-50 to-slate-100 hover:from-slate-100 hover:to-slate-200 rounded-lg text-slate-700 hover:text-slate-900 font-medium transition-all duration-300 whitespace-nowrap border border-transparent hover:border-slate-300 hover:shadow-sm"
-                   title={t(solution.titleKey)}
-                 >
-                   <solution.icon className="h-3 w-3 text-slate-500 group-hover:text-slate-700 transition-colors duration-300" />
-                   <span className="truncate">{t(solution.titleKey)}</span>
-                 </a>
-               ))}
-             </div>
-           </div>
-         </div>
+      {/* Floating Side Navigation */}
+      <div className="fixed left-4 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
+        {/* Vertical accent line */}
+        <div className="absolute left-[18px] top-4 bottom-4 w-px bg-gradient-to-b from-transparent via-[#00847e]/30 to-transparent pointer-events-none" />
 
-             {/* Solutions Sections */}
-       {SOLUTIONS.map((solution, sectionIndex) => (
-         <section key={solution.id} id={solution.id} className="py-16 scroll-mt-20">
-           <div className="container mx-auto px-4">
-             <div className="text-center mb-12">
-               <solution.icon className="h-12 w-12 text-[#00847e] mx-auto mb-4" />
-               <Typography variant="h3" color="blue-gray" className="mb-3">
-                 {t(solution.titleKey)}
-               </Typography>
-               <Typography variant="lead" className="text-slate-600 max-w-2xl mx-auto">
-                 {t(solution.descriptionKey)}
-               </Typography>
-             </div>
-             
-                           <div className="flex justify-end">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mr-[100px] ml-[200px]">
-                  {solution.certifications.map((cert, index) => (
-                    <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
-                      <CardBody className="p-6 text-center">
-                        <cert.icon className={`h-12 w-12 text-${cert.color}-600 mx-auto mb-4`} />
-                        <Typography variant="h5" color="blue-gray" className="mb-3">
-                          {t(cert.titleKey)}
-                        </Typography>
-                        <Typography variant="paragraph" className="text-slate-600">
-                          {t(cert.descriptionKey)}
-                        </Typography>
-                      </CardBody>
-                    </Card>
-                  ))}
+        <div className="relative flex flex-col gap-1 py-3 max-h-[70vh] overflow-y-auto pr-1"
+          style={{scrollbarWidth: 'none'}}>
+          {SOLUTIONS.map((solution, idx) => {
+            const IconComponent = solution.icon;
+            return (
+              <a
+                key={solution.id}
+                href={`#${solution.id}`}
+                className="group flex items-center gap-3 pl-1 pr-4 py-2 rounded-full text-xs font-medium text-slate-900 hover:text-[#00847e] transition-all duration-200 whitespace-nowrap hover:bg-white/80 hover:shadow-md hover:shadow-[#00847e]/10 hover:backdrop-blur-sm"
+                title={t(solution.titleKey)}
+              >
+                {/* Dot indicator */}
+                <span className="relative flex items-center justify-center w-7 h-7 flex-shrink-0">
+                  <span className="absolute inset-0 rounded-full bg-white/0 group-hover:bg-[#00847e]/10 transition-colors duration-200" />
+                  <IconComponent className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#00847e] transition-colors duration-200 relative z-10" />
+                </span>
+                <span className="truncate max-w-[110px] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  {t(solution.titleKey)}
+                </span>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Solution Sections */}
+      {SOLUTIONS.map((solution, sectionIndex) => {
+        const SectionIcon = solution.icon;
+        return (
+          <section
+            key={solution.id}
+            id={solution.id}
+            className={`py-20 scroll-mt-20 ${sectionIndex % 2 === 0 ? 'bg-white' : 'bg-slate-50'}`}
+          >
+            <div className="max-w-5xl mx-auto px-6">
+              {/* Section Header */}
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-5 mb-12">
+                <div className="w-16 h-16 rounded-2xl bg-[#00847e]/10 flex items-center justify-center flex-shrink-0">
+                  <SectionIcon className="h-8 w-8 text-[#00847e]" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-xs font-bold text-[#00847e]/60 uppercase tracking-widest">
+                      {String(sectionIndex + 1).padStart(2, '0')}
+                    </span>
+                    <div className="h-px w-8 bg-[#00847e]/30" />
+                  </div>
+                  <h2 className="text-3xl font-bold text-slate-900 leading-tight">
+                    {t(solution.titleKey)}
+                  </h2>
+                  <p className="text-slate-500 mt-2 max-w-2xl leading-relaxed">
+                    {t(solution.descriptionKey)}
+                  </p>
                 </div>
               </div>
-           </div>
-         </section>
-       ))}
+
+              {/* Certifications Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {solution.certifications.map((cert, index) => {
+                  const CertIcon = cert.icon;
+                  return (
+                    <div
+                      key={index}
+                      className="group rounded-2xl border border-slate-200 hover:border-[#00847e]/40 bg-white transition-all duration-300 hover:shadow-lg p-6 relative overflow-hidden"
+                    >
+                      <div className="w-12 h-12 rounded-xl bg-[#00847e]/10 flex items-center justify-center mb-5 group-hover:bg-[#00847e]/20 transition-colors duration-300">
+                        <CertIcon className="h-6 w-6 text-[#00847e]" />
+                      </div>
+                      <h4 className="font-semibold text-slate-900 text-base leading-snug mb-3">
+                        {t(cert.titleKey)}
+                      </h4>
+                      <p className="text-slate-500 text-sm leading-relaxed">
+                        {t(cert.descriptionKey)}
+                      </p>
+                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00847e]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+        );
+      })}
 
       {/* CTA Section */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <Typography variant="h2" color="white" className="mb-4">
-              {t('solucoes.cta.title')}
-            </Typography>
-            <Typography variant="lead" color="white" className="opacity-90 mb-8 max-w-3xl mx-auto">
-              {t('solucoes.cta.description')}
-            </Typography>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button 
-                color="white" 
-                variant="filled" 
-                className="bg-gradient-to-r from-[#00847e] to-[#00847e]/80 hover:from-[#00847e]/90 hover:to-[#00847e] text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-0"
-              >
-                <a href="/contactos" className="text-slate-900">{t('solucoes.cta.contact')}</a>
-              </Button>
-              <Button 
-                color="white" 
-                variant="outlined"
-                className="bg-gradient-to-r from-[#00847e] to-[#00847e]/80 hover:from-[#00847e]/90 hover:to-[#00847e] text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-0"
-              >
-                <a href="/sobreiso" className="text-white">{t('solucoes.cta.certification')}</a>
-              </Button>
-            </div>
+      <section className="relative py-24 bg-gradient-to-br from-slate-900 via-[#004d4a] to-slate-900 overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#00847e]/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#00847e]/10 rounded-full blur-3xl" />
+        <div className="relative max-w-4xl mx-auto px-6 text-center">
+          <span className="inline-flex items-center gap-2 bg-[#00847e]/20 text-teal-300 text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-8 border border-[#00847e]/30">
+            <span className="flex h-2 w-2 rounded-full bg-[#00847e] animate-pulse"></span>
+            {t('solucoes.cta.badge')}
+          </span>
+          <h2 className="text-5xl font-bold text-white mb-6 leading-tight">
+            {t('solucoes.cta.title')}
+          </h2>
+          <p className="text-lg text-teal-50/80 max-w-3xl mx-auto mb-10 leading-relaxed">
+            {t('solucoes.cta.description')}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contactos"
+              className="inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-[#00847e] to-teal-600 px-8 py-4 text-white font-semibold shadow-lg shadow-[#00847e]/30 transition-all duration-300 hover:shadow-xl hover:scale-105 hover:-translate-y-1"
+            >
+              {t('solucoes.cta.contact')}
+              <ArrowRightIcon className="w-5 h-5" />
+            </a>
+            <a
+              href="/sobreiso"
+              className="inline-flex items-center justify-center gap-3 rounded-xl border-2 border-white/30 bg-white/5 px-8 py-4 text-white font-semibold backdrop-blur-sm transition-all duration-300 hover:border-[#00847e] hover:bg-[#00847e]/10 hover:scale-105 hover:-translate-y-1"
+            >
+              {t('solucoes.cta.certification')}
+            </a>
           </div>
         </div>
       </section>

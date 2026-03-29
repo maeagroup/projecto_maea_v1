@@ -145,50 +145,82 @@ export default function ConsultoriaPage() {
       </section>
 
       {/* Serviços de Consultoria */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          {/* Header */}
           <div className="text-center mb-16">
-            <Typography variant="h2" color="blue-gray" className="mb-4">
+            <span className="inline-flex items-center gap-2 bg-[#00847e]/10 text-[#00847e] text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
+              <BuildingOfficeIcon className="w-4 h-4" />
+              {t('consulting.services.badge')}
+            </span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-5 leading-tight whitespace-pre-line">
               {t('consulting.services.title')}
-            </Typography>
-            <Typography variant="lead" className="text-gray-600 max-w-3xl mx-auto">
+            </h2>
+            <p className="text-gray-500 text-base max-w-3xl mx-auto leading-relaxed">
               {t('consulting.services.subtitle')}
-            </Typography>
+            </p>
           </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+          {/* Grid de Services */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {CONSULTING_SERVICES.map((service, index) => (
-              <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-                <div className="relative h-48">
+              <div
+                key={index}
+                className="group relative rounded-2xl overflow-hidden border border-slate-200 hover:border-[#00847e]/40 bg-white transition-all duration-300 hover:shadow-lg"
+              >
+                {/* Image */}
+                <div className="relative h-56 overflow-hidden bg-gradient-to-br from-slate-200 to-slate-300">
                   <Image
                     src={service.image}
                     alt={t(service.titleKey)}
                     fill
-                    className="object-cover"
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                </div>
-                <CardBody className="p-8">
-                  <div className="flex items-center gap-4 mb-6">
-                    <service.icon className="h-10 w-10 text-[#00847e]" />
-                    <Typography variant="h4" color="blue-gray">
-                      {t(service.titleKey)}
-                    </Typography>
+                  {/* Overlay número */}
+                  <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-[#00847e] text-white font-bold flex items-center justify-center text-lg shadow-lg">
+                    {String(index + 1).padStart(2, '0')}
                   </div>
-                  <Typography variant="paragraph" className="text-gray-600 mb-6">
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  {/* Title with Icon */}
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-[#00847e]/10 flex items-center justify-center flex-shrink-0">
+                      <service.icon className="h-5 w-5 text-[#00847e]" />
+                    </div>
+                    <h3 className="font-semibold text-slate-900 text-base leading-snug">
+                      {t(service.titleKey)}
+                    </h3>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-slate-600 text-sm leading-relaxed mb-5">
                     {t(service.descriptionKey)}
-                  </Typography>
+                  </p>
+
+                  {/* Features */}
                   <div className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                        <Typography variant="small" className="text-gray-700">
+                      <div key={featureIndex} className="flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 bg-[#00847e] rounded-full flex-shrink-0 mt-1.5" />
+                        <span className="text-slate-600 text-xs leading-relaxed">
                           {t(feature)}
-                        </Typography>
+                        </span>
                       </div>
                     ))}
                   </div>
-                </CardBody>
-              </Card>
+
+                  {/* CTA Link */}
+                  <a
+                    href="/contactos"
+                    className="inline-flex items-center gap-2 text-[#00847e] font-semibold text-sm mt-5 group/link hover:gap-3 transition-all duration-300"
+                  >
+                    {t('consulting.services.learn_more')}
+                    <ArrowRightIcon className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" />
+                  </a>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -229,101 +261,148 @@ export default function ConsultoriaPage() {
       </section>
 
       {/* Benefícios */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <Typography variant="h2" color="blue-gray" className="mb-6">
-                {t('consulting.benefits.title')}
-              </Typography>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <ChartBarIcon className="h-8 w-8 text-[#00847e] mt-1" />
-                  <div>
-                    <Typography variant="h5" color="blue-gray" className="mb-2">
-                      {t('consulting.benefits.results.title')}
-                    </Typography>
-                    <Typography variant="paragraph" className="text-gray-600">
-                      {t('consulting.benefits.results.description')}
-                    </Typography>
+      <section className="py-20 bg-gradient-to-b from-white to-slate-50">
+        <div className="max-w-6xl mx-auto px-6">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <span className="inline-flex items-center gap-2 bg-[#00847e]/10 text-[#00847e] text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
+              <ChartBarIcon className="w-4 h-4" />
+              {t('consulting.benefits.badge')}
+            </span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-5 leading-tight whitespace-pre-line">
+              {t('consulting.benefits.title')}
+            </h2>
+            <p className="text-gray-500 text-base max-w-3xl mx-auto leading-relaxed">
+              {t('consulting.benefits.subtitle')}
+            </p>
+          </div>
+
+          {/* Benefits Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            {[
+              {
+                icon: ChartBarIcon,
+                titleKey: 'consulting.benefits.results.title',
+                descriptionKey: 'consulting.benefits.results.description'
+              },
+              {
+                icon: UserGroupIcon,
+                titleKey: 'consulting.benefits.team.title',
+                descriptionKey: 'consulting.benefits.team.description'
+              },
+              {
+                icon: GlobeAltIcon,
+                titleKey: 'consulting.benefits.sustainable.title',
+                descriptionKey: 'consulting.benefits.sustainable.description'
+              },
+              {
+                icon: DocumentCheckIcon,
+                titleKey: 'consulting.benefits.support.title',
+                descriptionKey: 'consulting.benefits.support.description'
+              }
+            ].map((benefit, index) => {
+              const IconComponent = benefit.icon;
+              return (
+                <div
+                  key={index}
+                  className="group relative rounded-2xl overflow-hidden border border-slate-200 hover:border-[#00847e]/40 bg-white transition-all duration-300 hover:shadow-lg p-8"
+                >
+                  {/* Numbered Badge */}
+                  <div className="absolute top-6 right-6 w-12 h-12 rounded-full bg-[#00847e]/10 text-[#00847e] font-bold flex items-center justify-center text-lg">
+                    {String(index + 1).padStart(2, '0')}
                   </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <UserGroupIcon className="h-8 w-8 text-[#00847e] mt-1" />
-                  <div>
-                    <Typography variant="h5" color="blue-gray" className="mb-2">
-                      {t('consulting.benefits.team.title')}
-                    </Typography>
-                    <Typography variant="paragraph" className="text-gray-600">
-                      {t('consulting.benefits.team.description')}
-                    </Typography>
+
+                  {/* Icon and Title */}
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="w-14 h-14 rounded-xl bg-[#00847e]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#00847e]/20 transition-colors duration-300">
+                      <IconComponent className="h-6 w-6 text-[#00847e]" />
+                    </div>
+                    <h3 className="font-semibold text-slate-900 text-lg leading-snug pt-2">
+                      {t(benefit.titleKey)}
+                    </h3>
                   </div>
+
+                  {/* Description */}
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {t(benefit.descriptionKey)}
+                  </p>
+
+                  {/* Accent Line */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00847e]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                
-                <div className="flex items-start gap-4">
-                  <GlobeAltIcon className="h-8 w-8 text-[#00847e] mt-1" />
-                  <div>
-                    <Typography variant="h5" color="blue-gray" className="mb-2">
-                      {t('consulting.benefits.sustainable.title')}
-                    </Typography>
-                    <Typography variant="paragraph" className="text-gray-600">
-                      {t('consulting.benefits.sustainable.description')}
-                    </Typography>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <DocumentCheckIcon className="h-8 w-8 text-[#00847e] mt-1" />
-                  <div>
-                    <Typography variant="h5" color="blue-gray" className="mb-2">
-                      {t('consulting.benefits.support.title')}
-                    </Typography>
-                    <Typography variant="paragraph" className="text-gray-600">
-                      {t('consulting.benefits.support.description')}
-                    </Typography>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="flex justify-center">
-              <Image
-                src="/image/nossos.jpg"
-                alt="Consultoria MAEA"
-                width={500}
-                height={400}
-                className="rounded-lg shadow-lg"
-              />
-            </div>
+              );
+            })}
+          </div>
+
+          {/* Image Section */}
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/image/nossos.jpg"
+              alt="Consultoria MAEA"
+              width={1200}
+              height={400}
+              className="w-full h-96 object-cover"
+            />
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-900">
-        <div className="container mx-auto px-4 text-center">
-          <Typography variant="h2" color="white" className="mb-6">
+      <section className="relative py-24 bg-gradient-to-br from-slate-900 via-[#004d4a] to-slate-900 overflow-hidden">
+        {/* Background Decoration */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#00847e]/10 rounded-full blur-3xl -z-0"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#00847e]/10 rounded-full blur-3xl -z-0"></div>
+
+        <div className="relative max-w-4xl mx-auto px-6 text-center z-10">
+          {/* Badge */}
+          <span className="inline-flex items-center gap-2 bg-[#00847e]/20 text-teal-300 text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-8 border border-[#00847e]/30">
+            <span className="flex h-2 w-2 rounded-full bg-[#00847e] animate-pulse"></span>
+            {t('consulting.cta.badge')}
+          </span>
+
+          {/* Title */}
+          <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             {t('consulting.cta.title')}
-          </Typography>
-          <Typography variant="lead" color="white" className="mb-8 opacity-90 max-w-3xl mx-auto">
+          </h2>
+
+          {/* Description */}
+          <p className="text-lg text-teal-50/80 max-w-3xl mx-auto mb-10 leading-relaxed">
             {t('consulting.cta.description')}
-          </Typography>
-          <div className="flex flex-wrap justify-center gap-4">
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Link href="/contactos">
-              <Button 
-                color="gray" 
-                variant="filled" 
-                className="bg-gradient-to-r from-[#00847e] to-[#00847e]/80 hover:from-[#00847e]/90 hover:to-[#00847e] text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-0"
-              >
-                {t('consulting.cta.consulting')}
-              </Button>
+              <button className="relative inline-flex items-center gap-3 rounded-xl border-0 bg-gradient-to-r from-[#00847e] to-teal-600 px-8 py-4 text-white font-semibold shadow-lg shadow-[#00847e]/30 transition-all duration-300 hover:shadow-xl hover:shadow-[#00847e]/40 hover:scale-105 hover:-translate-y-1">
+                <span className="relative">
+                  {t('consulting.cta.consulting')}
+                </span>
+                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </button>
             </Link>
+
             <Link href="/contactos?subject=expert">
-              <Button color="white" variant="outlined">
+              <button className="inline-flex items-center gap-3 rounded-xl border-2 border-white/30 bg-white/5 px-8 py-4 text-white font-semibold backdrop-blur-sm transition-all duration-300 hover:border-[#00847e] hover:bg-[#00847e]/10 hover:scale-105 hover:-translate-y-1">
                 {t('consulting.cta.expert')}
-              </Button>
+                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              </button>
             </Link>
+          </div>
+
+          {/* Trust Indicators */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-16 pt-12 border-t border-white/10">
+            <div className="flex flex-col items-center">
+              <div className="text-3xl font-bold text-[#00847e] mb-2">24h</div>
+              <p className="text-sm text-teal-50/60">Resposta Garantida</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="text-3xl font-bold text-[#00847e] mb-2">Sem Custos</div>
+              <p className="text-sm text-teal-50/60">Diagnóstico Inicial</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="text-3xl font-bold text-[#00847e] mb-2">Especialistas</div>
+              <p className="text-sm text-teal-50/60">Equipa Certificada</p>
+            </div>
           </div>
         </div>
       </section>
